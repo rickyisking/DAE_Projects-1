@@ -40,4 +40,6 @@ cond=0
 while cond<= 20:
 #print ('welcome fighter')
     cond = cond + 5
+
+
     
