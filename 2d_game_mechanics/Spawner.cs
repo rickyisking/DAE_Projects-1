@@ -11,18 +11,19 @@ public class Spawner: MonoBehaviour
     void Start()
     {
       SpawnObject();
+      
     }
 
-    void SpawnObject();
+    void SpawnObject()
     {
-    Instantiate(objectToSpawn, spawnPoint.posistion, spawnPoint.rotation);
-    }
-
-
-// Update is called once per frame
-   
-    void Update()
-    {
+        Instantiate(objectToSpawn, spawnPoint.position, spawnPoint.rotation);
         
     }
+
+
+
 }
+
+   
+    
+
