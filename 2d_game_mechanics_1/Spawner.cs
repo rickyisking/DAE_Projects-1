@@ -10,15 +10,26 @@ public class Spawner: MonoBehaviour
 // Start is called before the first frame update
     void Start()
     {
-      SpawnObject();
+       StartCoroutine(SpawnObject());
       
     }
 
-    void SpawnObject()
+    private IEnumerator SpawnObject()
     {
-        Instantiate(objectToSpawn, spawnPoint.position, spawnPoint.rotation);
+        GameObject gb = Instantiate(objectToSpawn, spawnPoint.position, spawnPoint.rotation);
+        yield return new WaitForSeconds(10);
+
+        Destroy(gb);
+        yield return new WaitForSeconds(5);
+        spawner();
+
+        
         
     }
+    void spawner(){
+        Instantiate(objectToSpawn, spawnPoint.position, spawnPoint.rotation);
+
+    } 
 
 
 
