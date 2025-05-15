@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log("PlayerMovement is ready!");
     }
 
-    void Update()
+    void FixedUpdate()
     {
         // Handles player input every frame
         float moveX = Input.GetAxis("Horizontal");
